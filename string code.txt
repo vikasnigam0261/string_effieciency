@@ -1,0 +1,52 @@
+string eff 
+//2 insulator 
+clear all ; 
+close all ;
+clc ;
+fprintf('This program is made by vikas nigam & gawrinath \n')
+fprintf(' CALCULATION OF STRING EFFICIENCY IN TRANSMISSION LINE \n ')
+fprintf('INPUT PARAMETERS\n')
+k=input('Enter Capacitance Ratio =')
+v=input('Enter the Value of Line Voltage in KV =')
+v1=v/(2+k)
+v2=v1*(1+k)
+se=(v*100)/(2*v2);
+fprintf('OUTPUT PARAMETERS')
+fprintf(' v1=%f KV\n  v2=%f KV\n  v3=%f KV\n',v1,v2)
+fprintf("THE VALUEOF STRING EFF.=%f",se)
+
+
+//3insulator 
+clear all ; 
+close all ;
+clc ;
+fprintf('This program is made by vikas nigam & gawrinath \n')
+fprintf(' CALCULATION OF STRING EFFICIENCY IN TRANSMISSION LINE \n ')
+fprintf('INPUT PARAMETERS\n')
+k=input('Enter Capacitance Ratio =')
+v=input('Enter the Value of Line Voltage in KV =')
+v1=v/((1+k)*(3+k))
+v2=v1*(1+k)
+v3=v2+(v1+v2)*k
+se=(v*100)/(3*v3);
+fprintf('OUTPUT PARAMETERS')
+fprintf(' v1=%f KV\n  v2=%f KV\n  v3=%f KV\n',v1,v2,v3)
+fprintf("THE VALUEOF STRING EFF.=",se)
+
+//4 insulator 
+clear all ; 
+close all ;
+clc ;
+fprintf('This program is made by vikas nigam & gawrinath \n')
+fprintf(' CALCULATION OF STRING EFFICIENCY IN TRANSMISSION LINE \n ')
+fprintf('INPUT PARAMETERS\n')
+k=input('Enter Capacitance Ratio =')
+v=input('Enter the Value of Line Voltage in KV =')
+v1=v/(k^3+6*k^2+10*k+4)
+v2=v1*(1+k)
+v3=v2+(v1+v2)*k
+v4=(1+k)*v3+(v1+v2)*k
+se=(v*100)/(4*v4);
+fprintf('OUTPUT PARAMETERS')
+fprintf(' v1=%f KV\n  v2=%f KV\n  v3=%f KV\n',v1,v2,v3)
+fprintf("THE VALUEOF STRING EFF.=%f",se)
